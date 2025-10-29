@@ -1,0 +1,428 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../public/fonts/Inter-Regular.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../public/fonts/Inter-Medium.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../public/fonts/Inter-SemiBold.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../public/fonts/Inter-Bold.ttf") format("woff");
+}
+
+:root {
+  --color-primary: #5b5fc7;
+  --color-secondary: #b9b3df;
+  --color-primary1: #7c7fd2;
+  --color-primary2: #9d9fdd;
+  --color-primary3: #bdbfe9;
+  --color-primary4: #dedff4;
+  --color-primary5: #efeffa;
+  --color-primary6: #f9c74f;
+  --color-primary7: #32d583;
+  --color-primary8: #f7f8f9;
+  --color-primary9: #303644;
+  --color-primary10: #d9d9d9;
+  --color-primary11: #f97066;
+  --color-primary12: #f5f5f5;
+  --color-primary13: #0b57d0;
+  --color-primary14: #f0f1f4;
+  --color-primary15: #3987e6;
+  --color-primary16: #fe875c;
+  --color-primary17: #f0f0f0;
+  --color-primary18: #c4cad2;
+  --color-primary19: #ececec;
+  --color-primary20: #ffffff;
+  --color-edit: #f0f1f4;
+  --color-selected: #f7f5ff;
+  --color-link: #3918d9;
+  --text-primary: #373e4e;
+  --text-secondary: #808080;
+  --color-border: #ececec;
+  --color-border-light: #dadada;
+  --color-bg-base: #f9fafb;
+  --color-bg-container: #ffffff;
+  --color-error: #eb5757;
+  --font-family: "Inter", sans-serif;
+
+  --text-xs: 10px;
+  --text-sm: 12px;
+  --text-md: 14px;
+  --text-lg: 16px;
+  --disp-sm: 18px;
+  --disp-m: 20px;
+  --disp-md: 24px;
+
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  --scroll-forground: #c1c1c1;
+  --scroll-background: #f1f1f1;
+
+  /* kvl */
+  /* --disp-md: 24px;
+--disp-sm: 20px;
+--text-lg: 18px;
+--text-md: 16px;
+--text-sm: 14px;
+--text-xs: 12px; */
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] {
+  --color-primary: #5b5fc7;
+  --color-secondary: #8f8ac9;
+  --color-primary1: #7c7fd2;
+  --color-primary2: #9d9fdd;
+  --color-primary3: #bdbfe9;
+  --color-primary4: #2b2f3a;
+  --color-primary5: #232733;
+  --color-primary6: #f9c74f;
+  --color-primary7: #32d583;
+  --color-primary8: #1f2430;
+  --color-primary9: #e5e7eb;
+  --color-primary10: #3a3f4c;
+  --color-primary11: #ff7b72;
+  --color-primary12: #2a2f3a;
+  --color-primary13: #7aa2f7;
+  --color-primary14: #1f2430;
+  --color-primary15: #69a6ff;
+  --color-primary16: #ff9a76;
+  --color-primary17: #323848;
+  --color-primary18: #525866;
+  --color-primary19: #2b3140;
+  --color-primary20: #0f1115;
+  --color-edit: #2a2f3a;
+  --color-selected: #2b2f3a;
+  --color-link: #9ab0ff;
+  --text-primary: #e5e7eb;
+  --text-secondary: #a1a1aa;
+  --color-border: #3a3f4c;
+  --color-border-light: #2f3441;
+  --color-bg-base: #0f1115;
+  --color-bg-container: #0f1115;
+  --color-error: #ff7b72;
+  --scroll-forground: #4b5563;
+  --scroll-background: #1f2937;
+}
+
+/** scroll bar */
+/** Chrome */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-forground);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: var(--scroll-background);
+}
+
+::-webkit-scrollbar-button {
+  display: none; /* Hide the arrows */
+}
+
+/** Firefox */
+@-moz-document url-prefix() {
+  * {
+    scrollbar-width: auto; /* Options: auto, thin */
+    scrollbar-color: #c1c1c1 #f1f1f1; /* thumb and track colors */
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  color: var(--text-primary);
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-bg-container);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ant-input {
+  height: 44px;
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+}
+
+/* Override Ant Design form item styles */
+.ant-form-item {
+  margin: 0 !important; /* Remove bottom margin */
+  padding: 0 !important; /* Remove bottom padding */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+svg {
+  display: block;
+}
+
+.ant-table-wrapper .ant-table.ant-table-bordered > .ant-table-container {
+  border-inline-end: var(--ant-line-width) var(--ant-line-type)
+    var(--ant-table-border-color);
+}
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-content
+  > table
+  > thead
+  > tr
+  > th,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-header
+  > table
+  > thead
+  > tr
+  > th,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-body
+  > table
+  > thead
+  > tr
+  > th,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-summary
+  > table
+  > thead
+  > tr
+  > th,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-content
+  > table
+  > thead
+  > tr
+  > td,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-header
+  > table
+  > thead
+  > tr
+  > td,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-body
+  > table
+  > thead
+  > tr
+  > td,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-summary
+  > table
+  > thead
+  > tr
+  > td,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-content
+  > table
+  > tbody
+  > tr
+  > th,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-header
+  > table
+  > tbody
+  > tr
+  > th,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-body
+  > table
+  > tbody
+  > tr
+  > th,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-summary
+  > table
+  > tbody
+  > tr
+  > th,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-content
+  > table
+  > tbody
+  > tr
+  > td,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-header
+  > table
+  > tbody
+  > tr
+  > td,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-body
+  > table
+  > tbody
+  > tr
+  > td,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-summary
+  > table
+  > tbody
+  > tr
+  > td,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-content
+  > table
+  > tfoot
+  > tr
+  > th,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-header
+  > table
+  > tfoot
+  > tr
+  > th,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-body
+  > table
+  > tfoot
+  > tr
+  > th,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-summary
+  > table
+  > tfoot
+  > tr
+  > th,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-content
+  > table
+  > tfoot
+  > tr
+  > td,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-header
+  > table
+  > tfoot
+  > tr
+  > td,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-body
+  > table
+  > tfoot
+  > tr
+  > td,
+.ant-table-wrapper
+  .ant-table.ant-table-bordered
+  > .ant-table-container
+  > .ant-table-summary
+  > table
+  > tfoot
+  > tr
+  > td {
+  border-inline-end: 0 !important;
+}
+
+/* .ant-dropdown-menu-submenu-popup {
+  max-width: 200px;
+  max-height: 400px;
+  overflow: auto;
+}
+.ant-dropdown-menu-submenu {
+  box-shadow: 6px 6px 20px 0px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 8px !important;
+} */
+
+/* desktop */
+@media (max-width: 1199px) {
+}
+
+/* tab */
+@media (max-width: 991px) {
+}
+
+/* mobile */
+@media (max-width: 767px) {
+}
+
+@media (max-width: 575px) {
+}
+
+/* mobile */
+@media (max-width: 340px) {
+}
+
+/* height media */
+@media screen and (max-height: 750px) {
+}

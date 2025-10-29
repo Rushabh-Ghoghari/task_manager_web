@@ -1,0 +1,37 @@
+:global(.ant-layout).loginContainer {
+  height: 100vh;
+  background-color: var(--color-bg-container);
+}
+
+.loginContent {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+/* .loginContent > div,
+.loginContent > :first-child {
+  flex-basis: 40%;
+}
+
+.loginContent > div {
+  flex-basis: 60%;
+} */
+
+.rightPanel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .loginContent{
+    flex-direction: column;
+  }
+  .rightPanel {
+    align-items: self-start;
+    padding: 51px 16px;
+  }
+}

@@ -1,0 +1,7 @@
+.antTable {
+  width: 100%;
+}
+
+.antTable table thead th {
+  background-color: var(--color-primary5) !important;
+}

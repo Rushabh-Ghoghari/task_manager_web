@@ -1,0 +1,231 @@
+.mainLayout {
+  height: 100vh;
+}
+
+.navHeader {
+  background-color: var(--color-bg-container) !important;
+  border-bottom: 1px solid var(--color-border) !important;
+  display: flex !important;
+  align-items: center;
+  height: 80px;
+  padding: 0;
+}
+
+.headerInnerDiv1 {
+  display: flex;
+  align-items: center;
+}
+
+.titleDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.logoDiv {
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  padding: 0 15px;
+}
+
+:global(.ant-menu-submenu).subMenuList {
+  margin: 4px 8px 4px 0px;
+}
+
+:global(.ant-menu-submenu).subMenuList > div {
+  width: 100%;
+  margin-left: 0px;
+  border-radius: 0px;
+  height: 48px !important;
+}
+
+.subenuLabel {
+  margin: 0 10px;
+  font-size: var(--text-md);
+  font-weight: var(--font-normal);
+}
+
+.subMenuWrapper {
+  display: flex;
+  align-items: center;
+}
+
+:global(.ant-typography).navTitle {
+  font-size: 20px;
+  font-weight: var(--font-medium);
+  line-height: normal;
+  margin-bottom: 8px;
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+}
+
+:global(.ant-typography).timeTypo,
+:global(.ant-typography).dateTypo {
+  font-size: var(--text-lg);
+  font-weight: var(--font-normal);
+  color: var(--text-secondary);
+  line-height: normal;
+}
+
+.ellipseImg {
+  margin: 0 10px;
+}
+
+.headerInnerDiv2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.searchBar {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.searchBarIcon {
+  color: black;
+}
+
+.notificationIcon {
+  padding: 10px;
+  display: flex;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+:global(.ant-menu .ant-menu-item).navList {
+  height: 48px;
+  margin: 0 0 4px 0;
+  /* padding-left: 40px !important; */
+}
+
+:global(.ant-menu .ant-menu-item).navList a {
+  display: flex;
+  align-items: center;
+  font-size: var(--text-md);
+  line-height: normal;
+  font-weight: var(--font-medium);
+}
+
+:global(.ant-menu).menuUl {
+  border: none !important;
+  font-size: var(--text-lg);
+  line-height: normal;
+  font-weight: var(--font-semi-bold);
+}
+
+:global(.ant-divider).divider {
+  margin: 16px 0;
+  background-color: var(--color-border);
+}
+
+.menuItem2 {
+  margin-bottom: 54px;
+}
+
+/* Mobile */
+
+.menuIcon {
+  display: none;
+}
+
+.drawer {
+  display: none; /* just for class reference */
+}
+:global(.ant-drawer-body).drawerInner {
+  padding: 0;
+}
+:global(.ant-drawer .ant-drawer-body) .drawerInner {
+  padding: 0 !important;
+}
+
+.menuIcon {
+}
+
+.menuLabel {
+  margin: 0px 10px;
+}
+
+:global(.ant-menu-item-selected).navList a {
+  color: var(--color-primary) !important;
+}
+
+:global(.ant-menu-item-selected).navList a .menuIcon svg path {
+  stroke: var(--color-primary);
+}
+
+:global(.ant-menu-item).navList a .menuIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+:global(.ant-menu-item-selected).subMenuList .subMenuWrapper {
+  color: var(--color-primary) !important;
+}
+
+:global(.ant-menu-item-selected).subMenuList {
+  color: var(--color-primary) !important;
+}
+
+:global(.ant-menu-submenu-selected).subMenuList .menuIcon svg path {
+  stroke: var(--color-primary);
+}
+
+/* tab */
+@media (max-width: 991px) {
+  .navHeader {
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+  .menuIcon {
+    display: block;
+  }
+  .logoDiv {
+    display: none;
+  }
+  .navContent {
+    justify-content: center;
+  }
+  .headerInnerDiv2 {
+    margin: 0;
+  }
+  .titleDiv {
+    padding: 0 10px;
+  }
+
+  :global(.ant-typography).timeTypo,
+  :global(.ant-typography).dateTypo {
+    font-size: var(--text-sm);
+  }
+  /* :global(.ant-menu-submenu).subMenuList {
+    margin: 0px 10px;
+  } */
+}
+@media (max-width: 575px) {
+  :global(.ant-typography).navTitle {
+    font-size: var(--disp-sm);
+    white-space: nowrap;
+    width: 216px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  :global(.ant-typography).timeTypo,
+  :global(.ant-typography).dateTypo {
+    font-size: var(--text-sm);
+  }
+}
+
+/* mobile 340px */
+@media (max-width: 340px) {
+  :global(.ant-typography).navTitle {
+    width: 196px;
+  }
+}

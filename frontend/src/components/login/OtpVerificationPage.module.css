@@ -1,0 +1,29 @@
+:global(.ant-layout).otpContainer {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg-container);
+}
+
+.otpContent {
+  display: flex;
+  width: 100%;
+}
+
+.rightPanel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .otpContent {
+    flex-direction: column;
+  }
+  .rightPanel {
+    align-items: self-start;
+    padding: 50px 16px;
+  }
+}

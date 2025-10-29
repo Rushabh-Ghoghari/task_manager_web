@@ -1,0 +1,116 @@
+/*  */
+
+:global(.ant-layout).siderLayout {
+  height: 100%;
+}
+.sider {
+  background-color: red;
+  min-width: 240px !important;
+  width: 100% !important;
+  background-color: var(--color-bg-container) !important;
+  flex: none !important;
+  border-right: 1px solid var(--color-border);
+  height: 100%;
+}
+
+.siderContainer {
+  position: fixed;
+  overflow: auto;
+  width: 239px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menuItem1 {
+  margin-top: 60px;
+}
+
+.menuItem2 {
+  margin-bottom: 54px;
+}
+
+.subenuLabel {
+  margin: 0 10px;
+  font-size: var(--text-md);
+  font-weight: var(--font-normal);
+}
+
+.subMenuWrapper {
+  display: flex;
+  align-items: center;
+}
+
+:global(.ant-menu .ant-menu-item).navList {
+  height: 40px;
+  margin: 4px;
+  border-radius: 8px !important;
+  padding-left: 28px !important;
+}
+:global(.ant-menu .ant-menu-item).navList a {
+  display: flex;
+  align-items: center;
+  line-height: normal;
+  font-size: var(--text-md);
+  color: var(--text-primary);
+  font-weight: var(--font-normal);
+}
+:global(.ant-divider).divider {
+  margin: 16px 0;
+  background-color: var(--color-border);
+}
+:global(.ant-menu).menuUl {
+  border: none !important;
+  font-size: var(--text-lg);
+  line-height: normal;
+  font-weight: var(--font-semi-bold);
+}
+
+.menuIcon {
+}
+
+.menuLabel {
+  margin: 0px 10px;
+}
+
+.subMenuList {
+}
+
+.subMenuList > div {
+  padding-left: 29px !important;
+}
+
+:global(.ant-menu-item-selected).navList a {
+  color: var(--color-primary) !important;
+}
+
+:global(.ant-menu-item-selected).navList a .menuIcon svg path {
+  stroke: var(--color-primary);
+}
+
+:global(.ant-menu-item).navList a .menuIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+:global(.ant-menu-item-selected).subMenuList .subMenuWrapper {
+  color: var(--color-primary) !important;
+}
+
+:global(.ant-menu-item-selected).subMenuList {
+  color: var(--color-primary) !important;
+}
+
+:global(.ant-menu-submenu-selected).subMenuList .menuIcon svg path {
+  stroke: var(--color-primary);
+}
+
+:global(.ant-menu-item-selected) .menuIcon svg path {
+  stroke: var(--color-primary);
+}
+
+@media (max-width: 991px) {
+  .sider {
+    display: none;
+  }
+}

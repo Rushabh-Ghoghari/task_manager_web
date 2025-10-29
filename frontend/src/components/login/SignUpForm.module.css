@@ -1,0 +1,96 @@
+.formContainer {
+  width: 100%;
+  max-width: 22.5rem;
+  padding: 0; /* Remove any padding */
+}
+
+:global(.ant-typography).title {
+  font-weight: var(--font-normal);
+  font-size: 2.625rem;
+  line-height: normal;
+  margin-bottom: 12px;
+}
+
+:global(.ant-typography).description {
+  font-weight: var(--font-normal);
+  font-size: var(--text-lg);
+  line-height: normal;
+  margin-bottom: 40px;
+  letter-spacing: 0.1px;
+  color: var(--text-secondary);
+}
+
+.alignLeft {
+  width: 100%;
+  font-weight: var(--font-medium);
+}
+
+.loginForm {
+  width: 100%;
+  margin: -10px auto;
+  padding: 0;
+}
+.loginForm form .inputWrapper{
+  padding: 10px 0;
+}
+.loginForm form .inputWrapper input{
+  margin: 0;
+}
+/* .loginForm form .inputWrapper input:-webkit-autofill{
+  background-color: red !important;
+}
+.loginForm form .inputWrapper input:autofill{
+  background-color: red;
+} */
+.loginForm form .inputWrapper span{
+  padding: 10px 16px;
+  position: relative;
+}
+.loginForm form .inputWrapper span > * {
+  padding: 0;
+  position: absolute;
+  right: 6px;
+  top: 35%;
+}
+.loginForm form .inputWrapper span input{
+  height: 22px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 42px;
+  left: 0;
+  border-radius: 6px;
+  padding: 10px 16px;
+}
+
+.fromLabel {
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+  line-height: normal;
+}
+
+:global(.ant-btn).formButton {
+  max-width: 200px;
+  width: 100%;
+  font-size: var(--text-md);
+  line-height: normal;
+  padding: 13px 14px;
+  height: auto;
+  font-weight: var(--font-medium);
+}
+:global(.ant-form-item).formInner {
+  margin-top: 10px !important;
+}
+
+
+@media (max-width: 768px) {
+  :global(.ant-typography).title {
+    font-size: 2rem;
+  }
+  :global(.ant-typography).description {
+    margin-bottom: 1.87rem;
+  }
+  :global(.ant-btn).formButton {
+    max-width: 100%;
+  }
+}

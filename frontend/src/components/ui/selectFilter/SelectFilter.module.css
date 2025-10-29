@@ -1,0 +1,10 @@
+.filterDropdown {
+}
+
+.menuItem {
+  margin-bottom: 2px !important;
+}
+
+.menuItem:last-child {
+  margin-bottom: 0 !important;
+}

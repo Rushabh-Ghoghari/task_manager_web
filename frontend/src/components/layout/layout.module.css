@@ -1,0 +1,38 @@
+:global(.ant-layout).layout{
+  height: 100vh;
+}
+
+.navHeaderDiv {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+}
+.bottomBody{
+  display: flex;
+  margin-top: 80px;
+  width: 100%;
+}
+:global(.ant-layout-header).navHeaderInner {
+  background-color: var(--color-bg-container);
+}
+
+.container {
+  height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+}
+
+@media screen and (max-height: 750px) {
+  :global(.ant-layout).layout{
+    height: 100%;
+  }
+}
+
+
+@media screen and (max-width: 991px) and (max-height: 750px) {
+  :global(.ant-layout).layout{
+    height: 100vh;
+  }
+}

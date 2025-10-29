@@ -1,0 +1,518 @@
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: var(--color-bg-base);
+}
+
+.headerContainer {
+  height: 80px;
+}
+
+.bodyContainer {
+  display: flex;
+  height: calc(100% - 80px);
+}
+
+.rightPanel {
+  width: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  background-color: var(--color-bg-base);
+}
+
+.formHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  background-color: var(--color-bg-base);
+}
+
+.formHeader .mainCard {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+}
+
+.headerArrowText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:global(.ant-typography).titleTypo {
+  color: var(--color-primary);
+  font-size: var(--disp-md);
+  font-weight: var(--font-semi-bold);
+  line-height: normal;
+}
+
+.bodyInner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 0px 20px 20px 20px;
+  background-color: var(--color-bg-base);
+}
+
+.formWrapper,
+.formDataWrapper,
+.formDataInner {
+  width: 100%;
+  height: 100%;
+}
+
+.progressContainer {
+  display: flex;
+  margin-bottom: 14px;
+}
+
+.progressCount {
+  width: 100%;
+}
+
+.progressBarInner {
+  margin: -7px;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+.cardGridWrapper {
+  width: 100%;
+  padding: 7px;
+  max-width: 20%;
+}
+
+.countContainer {
+  padding: 0px !important;
+}
+
+.progressCard {
+  margin: 0px !important;
+  height: 100%;
+  min-height: 142px;
+  max-height: 142px;
+  border-radius: 10px !important;
+}
+
+.salesWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.salesDetails {
+  color: var(--color-primary);
+  font-size: var(--text-lg);
+  font-weight: var(--font-semi-bold);
+  line-height: normal;
+  margin-bottom: 33px;
+}
+
+.salesSelect {
+  margin-top: -7px;
+  width: 120px;
+}
+
+.customSelectPlaceholder {
+  color: var(--text-secondary);
+}
+
+.chartLegendWrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.legendWrapper {
+  display: flex;
+  margin: 0px 15px;
+  align-items: baseline;
+}
+
+:global(.ant-divider).chartLegend {
+  width: 4px;
+  height: 14px;
+  margin-left: 0px;
+  border-radius: 20px;
+}
+
+.ordersLegend {
+  background-color: var(--color-primary);
+}
+
+.chartLegendText {
+  margin-bottom: 4px;
+  font-family: var(--font-family);
+  font-size: var(--text-md);
+  font-weight: var(--font-normal);
+  text-align: left;
+}
+
+.mainProgressBar {
+  font-family: var(--font-family);
+  font-size: var(--disp-m);
+  font-weight: var(--font-semi-bold);
+  line-height: normal;
+  text-align: left;
+}
+
+.revenueLegend {
+  background-color: var(--color-primary3);
+}
+
+.progressWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progressBarContent {
+  width: 100%;
+}
+
+.createLicenseContainer {
+  margin-right: 0px;
+}
+
+.progressBarText {
+  width: 100%;
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+}
+
+.progressbarMain {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.doughnut,
+.emptyDoughnut {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translate(-100%, -92%);
+}
+
+.progressText {
+  font-family: var(--font-family);
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+  line-height: normal;
+}
+
+.tableWrapper {
+}
+
+.tableHeader {
+  padding-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.licenseTable {
+  height: 100%;
+  width: 80%;
+}
+
+.daysLeft {
+  color: var(--color-primary11);
+}
+
+.tableProfileContainer {
+  display: flex;
+}
+
+.profileWrapper {
+  width: 20%;
+  height: 100%;
+  padding-left: 14px;
+}
+
+.profileIcon {
+  display: none;
+  /* padding: 15px;
+  position: relative; */
+}
+
+.profileIconText {
+  width: 100%;
+  height: 100%;
+  max-height: 148px;
+}
+
+.profile {
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  border-radius: 50px;
+  transform: translate(-50%, -25%);
+  background-color: var(--color-primary18);
+}
+
+.profileUnset {
+  z-index: unset;
+  top: unset;
+  left: unset;
+  width: unset;
+  height: unset;
+  position: unset;
+  border-radius: unset;
+  transform: unset;
+  background-color: unset;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileContent {
+  padding: 20px;
+  /* margin: 45px 0px 20px 0px; */
+  text-align: center;
+  height: 100%;
+  min-height: 138px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileCount {
+  font-family: var(--font-family);
+  font-size: var(--disp-m);
+  font-weight: var(--font-semi-bold);
+  line-height: normal;
+}
+
+.profileInner {
+}
+
+.profileDivider {
+  margin-bottom: 14px;
+}
+
+.textContent {
+  /* margin-bottom: 20px;  */
+}
+
+.salesCount {
+  height: 100%;
+  max-height: 129px;
+}
+
+.tableInner {
+  height: 100%;
+  max-height: 235px;
+  cursor: pointer;
+}
+
+.tableInner > div * > div:nth-child(3) {
+  scrollbar-width: none;
+  display: none;
+}
+
+.tableMain {
+}
+
+.profileBody {
+}
+
+.barChartWrapper {
+  width: 100%;
+  margin-bottom: 14px;
+  margin-top: 14px;
+}
+
+.barChart {
+  width: 100%;
+  height: 100%;
+}
+
+.chartHeaderWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.textInnerHeader {
+  display: flex;
+  margin-bottom: 31px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.barHeaderTextSelect {
+  display: flex;
+  justify-content: space-between;
+}
+
+.textHeader {
+  font-weight: var(--font-semi-bold);
+  font-size: var(--text-lg);
+  line-height: normal;
+  color: var(--color-primary);
+}
+
+.chartTitle {
+}
+
+.headerSelect {
+  margin-top: -7px;
+  width: 120px;
+}
+
+.legendDivider {
+}
+
+:global(.ant-divider).chartLegend {
+  width: 4px;
+  height: 14px;
+  margin-left: 0px;
+  border-radius: 20px;
+}
+
+.legendText {
+}
+
+.barChartData {
+  width: 100%;
+  height: 100%;
+  max-height: 284px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tableRedirect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: var(--font-normal);
+  font-size: var(--text-md);
+  line-height: normal;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+@media (max-width: 1780px) {
+  .cardGridWrapper {
+    max-width: 33.33%;
+  }
+}
+
+@media (max-width: 1550px) {
+  .progressContainer {
+    margin-bottom: 14px !important;
+  }
+  .licenseTable {
+    width: 100%;
+    /* max-width: calc(100% - 326px); */
+  }
+  .profileWrapper {
+    width: 100%;
+    max-width: 326px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .progressContainer {
+    margin-bottom: 14px !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .cardGridWrapper {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 991px) {
+  :global(.ant-typography).titleTypo {
+    font-weight: var(--font-semi-bold) !important;
+    font-size: var(--disp-m) !important;
+  }
+}
+@media (max-width: 768px) {
+  .tableProfileContainer {
+    flex-wrap: wrap;
+  }
+  .licenseTable {
+    margin-bottom: 14px;
+    max-width: unset;
+  }
+  .profileWrapper {
+    padding-left: unset;
+    display: flex;
+    max-width: unset;
+  }
+  .profileDetails {
+    width: 100%;
+    margin-left: 10px;
+  }
+  .profileDivider {
+    width: 100%;
+    max-width: 136px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 685px) {
+  .cardGridWrapper {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 575px) {
+  .mainProgressBar {
+    text-align: center !important;
+  }
+  .progressBarText {
+    text-align: center;
+  }
+  .progressbarMain {
+    display: none;
+  }
+  .cardGridContainer {
+    max-width: 100% !important;
+  }
+  .mainProgressBarNumber {
+    text-align: left !important;
+  }
+  .tableProfileContainer {
+    flex-direction: column;
+  }
+  .tableInner {
+    max-height: unset;
+  }
+  .profileContent {
+    /* margin: 10px; */
+  }
+  .profileIcon {
+    padding: 10px 10px 0px 10px;
+  }
+  .legendWrapper {
+    margin: 0px 5px;
+  }
+}
+
+@media (max-width: 420px) {
+  .progressBarText {
+    text-align: center;
+  }
+}

@@ -1,0 +1,15 @@
+:global(.ant-btn).btn {
+  padding: 10px;
+  height: 100%;
+  position: relative;
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+:global(.ant-btn).btn:hover {
+  opacity: 0.8;
+}

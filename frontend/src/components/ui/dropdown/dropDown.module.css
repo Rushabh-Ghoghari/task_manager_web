@@ -1,0 +1,25 @@
+.formDropdown {
+}
+
+.dropDownWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.textBadgeWrapper {
+  position: relative;
+}
+
+:global(.ant-badge).formBadge {
+  padding-left: 4px;
+}
+
+.formBadge sup {
+  background: var(--color-primary) !important;
+}
+
+.labelBadgeWrapper {
+  margin-right: 14px;
+  display: flex;
+  align-items: center;
+}
