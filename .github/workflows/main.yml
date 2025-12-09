@@ -17,6 +17,8 @@ jobs:
 
       - name: Install packages
         run: npm install
+        working-directory: ./task_manager_web
+
 
       - name: Run Tests
         run: npm test
